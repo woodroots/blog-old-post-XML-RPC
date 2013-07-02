@@ -101,7 +101,7 @@ function blog_old_post(){
 }
 
 //Cron登録
-if(get_option('blog_post_interval')){
+if(get_option('blog_old_post_interval')){
 add_filter('cron_schedules','blog_old_post_time');
 function blog_old_post_time($schedules){
 	$blog_post_interval = intval(get_option('blog_old_post_interval'));
